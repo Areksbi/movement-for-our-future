@@ -1,0 +1,61 @@
+@import "~reset-css/reset.css";
+@import "typography";
+@import "variables";
+@import "utils";
+
+html {
+  align-items: center;
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: $font-size-general;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body {
+  line-height: 1.25;
+  max-width: calc(((#{$padding-main} * 2) + (#{$padding-li} * 2)) + #{$width-max-text});
+  padding: $padding-general;
+}
+
+main {
+  padding: $padding-main;
+}
+
+h1 {
+  font-size: $font-size-big;
+  text-align: center;
+}
+
+h2 {
+  font-size: $font-size-medium;
+  margin-bottom: $margin-general;
+}
+
+svg {
+  width: 100%;
+}
+
+footer {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+figcaption {
+  @include visually-hidden;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  font-size: $font-size-medium / 4 * 3;
+  padding: $padding-li;
+}
+
+p {
+  font-size: $font-size-general;
+  max-width: $width-max-text;
+}
